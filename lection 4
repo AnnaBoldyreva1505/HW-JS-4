@@ -1,7 +1,15 @@
 ============= Задание 1 ====================
+function makePizza() {
+  return "Your pizza is being prepared, please wait.";
+}
+// Change code below this line
+
+const result = null;
+const pointer = null;
 
 //Дополни код так, чтобы в переменной result был результат выполнения функции makePizza, а в переменной pointer была ссылка на функцию makePizza.
 
+РЕШЕНИЕ
 function makePizza() {
   return "Your pizza is being prepared, please wait.";
 }
@@ -14,22 +22,84 @@ const pointer = makePizza; // в переменной pointer ссылка на 
 
 
 ============= Задание 2 ====================
+function deliverPizza(pizzaName) {
+  return `Delivering ${pizzaName} pizza.`;
+}
 
+function makePizza(pizzaName) {
+  return `Pizza ${pizzaName} is being prepared, please wait...`;
+}
+
+// Chande code below this line
+function makeMessage(pizzaName) {
+  return;
+}
 //Дополни функцию makeMessage так, чтобы она ожидала вторым параметром (параметр callback) колбэк-функцию и возвращала ее вызов. Функция deliverPizza или makePizza будет передаваться как колбэк и ожидать аргументом имя готовой доставляемой пиццы.
+
+
+РЕШЕНИЕ
+function deliverPizza(pizzaName) {
+  return `Delivering ${pizzaName} pizza.`;
+}
+
+function makePizza(pizzaName) {
+  return `Pizza ${pizzaName} is being prepared, please wait...`;
+}
+
+// Chande code below this line
+function makeMessage(pizzaName, callback) {
+  return callback(pizzaName);
+}
+
+
 
 ============= END =================
 
 
 ============= Задание 3 ====================
+function makePizza(pizzaName, callback) {
+  console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+  callback(pizzaName);
+}
+
+makePizza("Royal Grand", function deliverPizza(pizzaName) {
+  console.log(`Delivering pizza ${pizzaName}.`);
+});
+// Change code below this line
+
+makePizza("Ultracheese");
+
+//Дополни второй вызов функции makePizza(pizzaName, callback), передав вторым аргументом инлайн колбэк-функцию eatPizza(pizzaName), которая логирует строку "Eating pizza <имя пиццы>".
+
+РЕШЕНИЕ
+
+function makePizza(pizzaName, callback) {
+  console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+  callback(pizzaName);
+}
+
+makePizza("Royal Grand", function deliverPizza(pizzaName) {
+  console.log(`Delivering pizza ${pizzaName}.`);
+});
+// Change code below this line
+
+
+
+makePizza("Ultracheese", function eatPizza(pizzaName) {
+ console.log(`Eating pizza ${pizzaName}.`);
+});
 
 ============= END =================
 
 
 ============= Задание 4 ====================
 
+
+РЕШЕНИЕ
+
 ============= END =================
 
 
 ============= Задание 5 ====================
-
+РЕШЕНИЕ
 ============= END =================
